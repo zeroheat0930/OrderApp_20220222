@@ -1,11 +1,13 @@
 package com.zeroheat.orderapp_20220222.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.zeroheat.orderapp_20220222.R
+import com.zeroheat.orderapp_20220222.ViewStoreDetailActivity
 import com.zeroheat.orderapp_20220222.adapters.StoreAdapter
 import com.zeroheat.orderapp_20220222.datas.StoreData
 import kotlinx.android.synthetic.main.fragment_pizza_store_list.*
@@ -33,6 +35,13 @@ class PizzaStoreListFragment : Fragment() {
 
 
     fun setupEvents(){
+
+        pizzaStoreListView.setOnItemClickListener { parent, view, position, id ->
+
+            val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java)
+            startActivity(myIntent)
+
+        }
 
     }
     fun setValues(){
