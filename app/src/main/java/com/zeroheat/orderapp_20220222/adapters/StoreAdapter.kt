@@ -38,6 +38,8 @@ class StoreAdapter(
         ratingBar.rating = data.rating.toFloat()
 
 
+
+
         return row
 
     }
