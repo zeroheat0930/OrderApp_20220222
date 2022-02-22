@@ -4,7 +4,7 @@ class StoreData(
     val name : String,
     val rating : Double,
     val phoneNum : String,
-    val logoImagaURL : String,
+    val logoImageURL : String,
 
     ) {
 }
