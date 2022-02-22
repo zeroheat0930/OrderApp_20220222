@@ -2,13 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    android:gravity="center_vertical"
     android:padding="15dp">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgPizza"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:civ_border_width="2dp"
         android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
@@ -21,26 +24,19 @@
             android:id="@+id/txtPizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="피자헛"
-            android:textSize="45sp"/>
+            android:text="가게 이름 자리"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/ratingBar"
+
+        <com.willy.ratingbar.ScaleRatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dfdf"/>
-        <!--        <com.chaek.android.RatingBar-->
-        <!--            android:id="@+id/ratingBar"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:rating_flag="FIVE"-->
-        <!--            app:rating_star_color="#FDD71B"-->
-        <!--            app:rating_star_empty_color="@color/black"-->
-        <!--            app:rating_star_height="30dp"-->
-        <!--            app:rating_star_width="30dp"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:layout_margin="5dp"-->
-        <!--            app:rating_start_count="3"/>-->
+            app:srb_rating="2"
+            app:srb_starWidth="20dp"
+            app:srb_starHeight="20dp"
+            app:srb_starPadding="2dp"
+            />
 
     </LinearLayout>
 
